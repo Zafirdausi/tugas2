@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Tugas2{
+
+    public static void main(String[] args) {
+        int jumlahSiswa;
+        int nilaiSiswa;
+        int absensiSiswa;
+        double Totalsemua_Nilai=0;
+        double ratarataSiswa;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("jumlahSiswa: ");
+        jumlahSiswa=scanner.nextInt();
+        System.out.println("----------------------------------------------");
+        for(absensiSiswa=1; absensiSiswa<=jumlahSiswa; absensiSiswa++){
+            System.out.println("Masukkan Nilai Siswa ke-"+ absensiSiswa +":");
+            nilaiSiswa = scanner.nextInt();
+            Totalsemua_Nilai += nilaiSiswa;
+
+        
+        }
+        System.out.println("----------------------------------------------");
+        ratarataSiswa = Totalsemua_Nilai/jumlahSiswa;
+        System.out.println("Rata-rata nilai dari"+jumlahSiswa+"siswa adalah:"+ratarataSiswa);
+    }
+}
